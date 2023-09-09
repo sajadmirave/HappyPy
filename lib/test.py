@@ -1,4 +1,4 @@
-from index import HappyPy, Div, Button, H
+from index import HappyPy, Div, Button, H,State
 
 # app obj
 app = HappyPy()
@@ -14,6 +14,7 @@ app.bootstrap()
 
 
 def myComponent():
+    nameState = State('sajad')
     return Div(
         className="main",
         idTag="main-div",
@@ -22,7 +23,7 @@ def myComponent():
                 # bootstrap class
                 className='text-center text-warning',
                 hSize='6',
-                code='Hello World!'
+                code=nameState.echo()
             )
         ]
     )

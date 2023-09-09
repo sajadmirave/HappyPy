@@ -104,7 +104,7 @@ class HappyJs:
             allComponent += str(i)
 
         return allComponent
-
+    
 
 happyPy = HappyPy()
 
@@ -159,3 +159,16 @@ def Form(action='', method=''):
 
 def Input(placeHolder='', type='text'):
     return f"<input type='{type}' placeholder='{placeHolder}' />"
+
+
+class State:
+    def __init__(self,value) -> None:
+        self.value = value
+
+    def update(self,newValue):
+        self.value = newValue
+    
+    def echo(self):
+        return self.value
+
+    

@@ -2,7 +2,7 @@
 
 usage example
 
-```
+```py
 from index import HappyPy
 
 # app obj
@@ -28,7 +28,7 @@ app.init()
 
 create components
 
-```
+```py
 def myComponent():
     return Div(
         className="main",
@@ -42,6 +42,21 @@ def myComponent():
             )
         ]
     )
+```
+
+state management
+
+```py
+from index import State
+
+#create state
+myState= State(value)
+
+#show state value
+myState.echo()
+
+#update state
+myState.update(newValue)
 ```
 
 ### rendering
